@@ -14,21 +14,25 @@ type Result struct {
 }
 
 func main() {
+	// request tollbooth data
 	fmt.Print("Enter the number of tollbooths : ")
 	var tollbooths int32
 	fmt.Scan(&tollbooths)
 	fmt.Println("tollbooths: ", tollbooths)
 
+	// request interval data
 	fmt.Print("Enter interval in minutes : ")
 	var x int32
 	fmt.Scan(&x)
 	fmt.Println("interval: ", x, "minutes")
 
+	// request traffic data
 	fmt.Print("Enter the number of requests : ")
 	var requests int32
 	fmt.Scan(&requests)
 	fmt.Println("requests: ", requests, " per ", x, " minute(s)")
 
+	// request delay data
 	fmt.Print("Enter the delay between requests in seconds : ")
 	var delay int32
 	fmt.Scan(&delay)

@@ -16,7 +16,7 @@ func TestPressure(t *testing.T) {
 	var result int32 = Pressure(rate, fulfillment, interval)
 
 	// Assert.
-	assert.Equal(t, int32(1), result, "The test expects that the result will match the result of the function.")
+	assert.Equal(t, int32(1), result, "The test expects that result will be 1.")
 }
 
 func TestUtilization(t *testing.T) {
@@ -28,7 +28,7 @@ func TestUtilization(t *testing.T) {
 	var result int32 = Utilization(pressure, handlers)
 
 	// Assert.
-	assert.Equal(t, int32(30), result, "The test expects that the result will match the result of the function.")
+	assert.Equal(t, int32(30), result, "The test expects that result will be 30.")
 }
 
 func TestBNotBlocking(t *testing.T) {
@@ -40,7 +40,7 @@ func TestBNotBlocking(t *testing.T) {
 	var result int32 = B(handlers, pressure)
 
 	// Assert.
-	assert.Equal(t, int32(0), result, "The test expects that the result will match the result of the function.")
+	assert.Equal(t, int32(0), result, "The test expects that result will be 0.")
 }
 
 func TestBIsBlocking(t *testing.T) {
@@ -52,7 +52,7 @@ func TestBIsBlocking(t *testing.T) {
 	var result int32 = B(handlers, pressure)
 
 	// Assert.
-	assert.Equal(t, int32(1), result, "The test expects that the result will match the result of the function.")
+	assert.Equal(t, int32(1), result, "The test expects that result will be 1.")
 }
 
 func TestCNotQueuing(t *testing.T) {
@@ -64,7 +64,7 @@ func TestCNotQueuing(t *testing.T) {
 	var result int32 = C(handlers, pressure)
 
 	// Assert.
-	assert.Equal(t, int32(0), result, "The test expects that the result will match the result of the function.")
+	assert.Equal(t, int32(0), result, "The test expects that the result will be 0.")
 }
 
 func TestCIsQueuing(t *testing.T) {
@@ -76,5 +76,5 @@ func TestCIsQueuing(t *testing.T) {
 	var result int32 = C(handlers, pressure)
 
 	// Assert.
-	assert.Equal(t, int32(1), result, "The test expects that the result will match the result of the function.")
+	assert.Equal(t, int32(1), result, "The test expects that result will be 1.")
 }
