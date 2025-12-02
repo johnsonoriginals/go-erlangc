@@ -17,7 +17,7 @@ go mod init example.com
 go mod tidy
 
 # run the sim
-go run main
+go run example.xyz
 
 # run all tests
 go test ./... -v
