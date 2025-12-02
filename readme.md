@@ -4,6 +4,8 @@
 
 > Just some example code.
 
+License: [text](MIT.md)
+
 ## Build Setup
 
 ```bash
